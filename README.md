@@ -1,24 +1,32 @@
-# README
+# servnotes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Backend service for processing API requests with notes. Built on Ruby on Rails with PostgreSQL for persistence.
 
-Things you may want to cover:
+## Requirements
 
-* Ruby version
+- Ruby `3.3.0`
+- PostgreSQL
 
-* System dependencies
+## Getting Started
 
-* Configuration
+### 1. Install dependencies
 
-* Database creation
+```bash
+bundle install
+```
 
-* Database initialization
+### 2. Run migrations
 
-* How to run the test suite
+```bash
+rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+> Creates the `my_project_name_development` database in PostgreSQL along with a `notes` table.
 
-* Deployment instructions
+### 3. Start the server
 
-* ...
+```bash
+rails s -p 3000
+```
+
+> Puma listens on `http://localhost:3000` by default.
